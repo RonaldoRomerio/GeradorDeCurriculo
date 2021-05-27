@@ -43,7 +43,7 @@ function AuthProvider({children}){
 
         })
         .catch((error) => {
-            console.log(error);
+            toast.error(error.message);
             setLoadingAuth(false);
         })
     }
@@ -71,7 +71,6 @@ function AuthProvider({children}){
                 setLoadingAuth(false);
             });
         }).catch((error) =>{
-            console.log(error);
             toast.error(error.message);
             setLoadingAuth(false);
         })

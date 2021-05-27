@@ -12,8 +12,7 @@
 /build
 
 #services
-/service/FirebaseConnection.js
-
+/service
 # misc
 .DS_Store
 .env.local
