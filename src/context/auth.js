@@ -1,5 +1,6 @@
 import{createContext, useState, useEffect} from 'react';
 import firebase from '../service/FirebaseConnection';
+import {toast} from 'react-toastify';
 
 //APIContext
 export const AuthContext = createContext({});
@@ -12,7 +13,7 @@ function AuthProvider({children}){
     //Ao iniciar a aplicação, verifica se há usuário autenticado 
     useEffect(() => {
         function loadStorage(){
-            const storageUser = localStorage.getItem('SistemaUser');
+            const storageUser = localStorage.getItem('empresaUser');
             if(storageUser){
                 setUser(JSON.parse(storageUser));
                 setLoading(false);
@@ -47,44 +48,16 @@ function AuthProvider({children}){
             setLoadingAuth(false);
         })
     }
-    //Método de criação de usuário - Recebe email, senha e outras informações do usuário
-    //Responsável pela criação e pela inserção de dados do usuário no database firestore
-    async function signUp(email, senha, nome){
-        setLoadingAuth(true);
-        await firebase.auth().createUserWithEmailAndPassword(email, senha)
-        .then( async (value) => {
-            //Recebe o resultado da criação do usuário e insere as informações no database firestore
-            let uid = value.user.uid
-            await firebase.firestore().collection('users').doc(uid).set({
-                nome: nome,
-                avatarurl: null,
-            }).then(()=>{
-                //Recebe as informações do database firestore e insere essas informações no obeto data
-                let data = {
-                    uid: uid,
-                    nome: nome,
-                    email: value.user.email,
-                    avatarurl: null
-                }
-                setUser(data);
-                storageUser(data);
-                setLoadingAuth(false);
-            });
-        }).catch((error) =>{
-            toast.error(error.message);
-            setLoadingAuth(false);
-        })
-    }
     //Insere os dados do usuário no local storage para futuramente ser usado como verificação de usuário logado
     function storageUser(data){
-        localStorage.setItem('SistemaUser', JSON.stringify(data));
+        localStorage.setItem('empresaUser', JSON.stringify(data));
     }
     //Método responsável pela saída do responsável do sistema (Deslogar)
     async function signOut(){
         //Desloga no firebase
         await firebase.auth().signOut();
         //Remove informações do localStorage
-        localStorage.removeItem('SistemaUser');
+        localStorage.removeItem('empresaUser');
         //Remove informações da State
         setUser(null);
     }
@@ -96,7 +69,6 @@ function AuthProvider({children}){
             signed: !!user, 
             user, 
             loading, 
-            signUp,
             signOut,
             signIn,
             loadingAuth,

@@ -29,6 +29,7 @@ export default function RouterWrapper({
     }
     //Verifica se há usuário logado e se página não é privada
     if(signed && !isPrivate){
+        return <Redirect to='/dashboard'/>
     }
 
     return (
