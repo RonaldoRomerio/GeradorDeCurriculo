@@ -1,7 +1,8 @@
 import {useContext} from 'react';
 import './header.css';
-import {FiLogOut} from 'react-icons/fi';
+import {FiLogOut, FiSettings} from 'react-icons/fi';
 import {AuthContext} from '../../context/auth'
+import {Link} from 'react-router-dom';
 
 export default function Header() {
       const {singOut} = useContext(AuthContext)
@@ -9,10 +10,13 @@ export default function Header() {
     <div className="header_container">
       <header>
         <div className="left_area">
-          <h3>SR IMPRESSÕES</h3>
+          <Link to='/dashboard'>SR IMPRESSÕES</Link>
         </div>
         <div className="right_area">
-        <button className='button_logout' onClick={() => singOut()} ><FiLogOut size={25} color="#FFF"/> Sair</button>
+        <button className='button_logout' onClick={() => singOut()} ><FiLogOut size={25} color="#FFF"/> 
+          <span>Sair</span>
+        </button>
+        <Link><FiSettings size={25} color="#FFF"/> <span>Configurações</span></Link>
         </div> 
       </header>
     </div>
