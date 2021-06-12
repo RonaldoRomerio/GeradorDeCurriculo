@@ -64,12 +64,12 @@
     }
     .content{
         margin-left: 250px;
-        padding-top: 80px;
+        padding-top: 60px;
         border: 1px solid blue;
     }
     #check:checked ~ .content{
         margin-left: 60px;
-        padding-top: 80px;
+        padding-top: 60px;
         border: 1px solid blue;
     }
 }

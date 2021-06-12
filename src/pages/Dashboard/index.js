@@ -5,12 +5,14 @@ import Menu from '../../Components/Menu';
 import Card from '../../Components/Card';
 import {FiUser, FiGlobe} from 'react-icons/fi';
 import './style.css'
+import Title from '../../Components/Title';
 export default function Dashboard() {
   return (
     <div>
         <Header/>
         <Menu/>
         <div className='content'>
+          <Title title='Dashboard'/>
           <div className='content_dashboard'>
             <div className='container_card'>
             <Card link='/candidatos' titulo='Qtd. de Candidatos'>
