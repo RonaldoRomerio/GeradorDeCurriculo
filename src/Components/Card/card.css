@@ -1,0 +1,38 @@
+.card_content{
+    display: block;
+    margin: 15px;
+    padding: 5px;
+    width: 90%;
+    height: 130px;
+    background-color: rgb(233, 230, 230);
+    border-left: red solid 4px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 0px 0px rgb(0, 0, 0, 0.3);
+}
+.card_title{
+    font-size: 5mm;
+    color: red;
+    font-weight: 700;
+    text-align: center;
+    display: block;
+}
+.card_content span{
+    font-size: 16mm;
+    color: red;
+}
+.card_info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.card_acess{
+    text-align: right;
+}
+.card_acess a{
+    color: red;
+    font-weight: bold;
+    text-decoration: none;
+    padding-right: 10px;
+    font-size: 5mm;
+}
