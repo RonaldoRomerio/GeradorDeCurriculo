@@ -1,0 +1,60 @@
+.list_container{
+    text-align:center;
+    margin: 10px;
+}
+ul{
+    margin-top: 0;
+    padding: 10px;
+    width: 97%;
+    margin: 0px 10px 10px 10px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.26);
+    padding: auto;
+    position: relative;
+    overflow-x: auto;
+    height: 190px;
+}
+ul li{
+    list-style: none;
+    margin: 10px;
+    background-color: rgba(255, 0, 0, 0.404);
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid rgba(255, 0, 0, 0.151);
+    text-align: center;
+}
+ul li div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.list_text a{
+    text-decoration: none;
+    color: #FFF;
+}
+.list_button{
+    outline: none;
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+    border: none;
+}
+
+.btDelete{
+    background: #ED213A;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #93291E, #ED213A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #93291E, #ED213A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.btConfirm{
+    background: #11998e;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.btEdit{
+    background: #FFE000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #799F0C, #FFE000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #799F0C, #FFE000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}

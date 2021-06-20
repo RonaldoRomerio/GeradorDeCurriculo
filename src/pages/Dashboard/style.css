@@ -5,6 +5,10 @@
     width: 100%;
     justify-content: space-around;
 }
+.list_links{
+    width: 47.5% !important;
+    background-color: transparent;
+}
 
 @media  screen and (max-width:780px) {
     .container_card{
@@ -12,5 +16,11 @@
         flex-direction: column;
         align-items: center;
         width: 100%;
+    }
+    .list_links{
+        width: 94.5% !important;
+    }
+    .form_area_input span{
+        display: none;
     }
 }

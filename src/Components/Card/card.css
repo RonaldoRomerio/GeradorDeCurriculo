@@ -4,9 +4,9 @@
     padding: 5px;
     width: 90%;
     height: 130px;
-    background: #D3CCE3;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #E9E4F0, #D3CCE3);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    background: #D3CCE3;
+    background: -webkit-linear-gradient(to bottom, #E9E4F0, #D3CCE3);
+    background: linear-gradient(to bottom, #E9E4F0, #D3CCE3);
     border-left: red solid 4px;
     border-radius: 5px;
     box-shadow: 2px 2px 0px 0px rgb(0, 0, 0, 0.3);

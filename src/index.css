@@ -15,5 +15,92 @@ html{
   background-color: #d4d4d4
 }
 button{
-  cursor:pointer
+  cursor:pointer;
+}
+.form{
+  margin-left: 15px;
+  background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);
+  background: linear-gradient(to right, #E9E4F0, #D3CCE3);
+  width: 100%;
+  margin-bottom: 0;
+}
+.form_header{
+  background: #D3CCE3;
+  height: 30px;
+  border-bottom: 0.2px solid rgba(105, 105, 105, 0.096);
+  border-radius: 5px 5px 0px 0px;
+}
+.form_header P{
+  text-transform: uppercase;
+  color: red;
+  font-weight: bolder;
+  padding-left: 10px;
+  font-size: 5mm;
+  margin-top: 0;
+}
+.form_area_input{
+  margin-top: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.form_area_input input{
+  height: 30px;
+  text-indent: 5px;
+  font-size: 12.6pt;
+  border-radius: 12px;
+  outline: none;
+  border: 2px solid rgba(255, 0, 0, 0.459);
+  margin: 5px;
+  width: 100%;
+}
+.form_area_input button{
+  background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);
+  background: linear-gradient(to right, #E9E4F0, #D3CCE3);
+  border-radius: 10px;
+  outline: none;
+  border: 2px solid rgba(255, 0, 0, 0.459);
+  height: 35px;
+  width: 100%;
+  color: red;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form_area_input span{
+  font-weight: bold;
+}
+.list_Data{
+  margin-left: 15px;
+  background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);
+  background: linear-gradient(to right, #E9E4F0, #D3CCE3);
+  width: 100%;
+  margin-top: 0;
+}
+.list_Data span{
+  color: red;
+  padding: 10px;
+  font-weight: 400;
+  width: 100%;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px gray; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: red; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: red; 
 }
